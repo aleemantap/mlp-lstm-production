@@ -1,0 +1,21 @@
+tags:
+  - name: Jaringan Syaraf (Neural Network)
+
+parameters:
+  - name : text
+    in   : formData
+    required : true
+    type : string 
+  - name: cleaning
+    in: formData
+    required: true
+    enum: [ "yes", "no"]
+    type: string
+    
+responses:
+    '200':
+        description : Successful responses
+    '400':
+        description : Bad Request
+    '500':
+        description : Internal Server Error

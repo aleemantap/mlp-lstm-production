@@ -1,0 +1,34 @@
+      tags:
+        - name: Long-Short Term Memory
+      consumes:
+        - multipart/form-data
+      parameters:
+    
+        - name: upfile_tweet
+          in: formData
+          required: true
+          type: file
+
+        - name: test_size
+          in: formData
+          required: true
+          type: string
+
+        - name: epochs
+          in: formData
+          required: true
+          type: string
+        
+        - name: cleaning
+          in: formData
+          required: true
+          enum: [ "yes", "no"]
+          type: string
+          
+      responses:
+          '200':
+              description : Successful responses
+          '400':
+              description : Bad Request
+          '500':
+              description : Internal Server Error
